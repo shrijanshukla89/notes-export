@@ -2,9 +2,9 @@
 
 ### Export HTML copies of your notes from Apple Notes
 
-I have tested this on the OS X El Capitan GM and a few of the developer seeds (I can't remember which ones); it probably doesn't work on older versions.
+I have made a change to handle the scenario where there are multiple notes with the same title. Content is appended to the exported file of the same name. 
 
-To go in the other direction, see Steven Frank's [notes-import script](https://github.com/panicsteve/notes-import).
+Original script by Alex Chan <alex@alexwlchan.net>
 
     --
     -- notes-export.scpt
@@ -28,8 +28,6 @@ To go in the other direction, see Steven Frank's [notes-import script](https://g
     --    ~Library/Group Containers/group.com.apple.notes/Media).
     --  * Some attachment types (e.g. app links) show up as "Missing value"
     --  * Some formatting is lost.
-    --  * A note with the same title as a previously exported note will be
-    --    overwritten.
     --  * It will exported notes in the "Recently Deleted" folder which
     --    haven't been purged from disk yet.
     --

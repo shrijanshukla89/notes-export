@@ -59,7 +59,7 @@ tell application "Notes"
 		-- Write the body of the note out to file as HTML
 		set filepath to noteNameToFilePath(name of theNote as string) of me
 		set noteFile to open for access filepath with write permission
-		write (body of theNote as string) to noteFile to noteFile starting at (get eof of noteFile) + 1
+		write (body of theNote as string) to noteFile starting at (get eof of noteFile) + 1
 		close access noteFile
 
 		-- Record a list of attachments for this file
